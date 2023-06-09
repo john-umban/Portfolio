@@ -1,0 +1,87 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package final_ea2;
+public class tree_Nodes {
+
+    public static void main(String[] args) {
+Tree tree = new Tree();
+
+// create nodes of tree
+tree.root = new node(0050);
+tree.root.left = new node(0040);
+tree.root.right = new node(0060);
+
+//left child
+tree.root.left.left = new node(0037);
+tree.root.left.right = new node(0045);
+tree.root.left.left.left = new node(0025);
+tree.root.left.left.left.right = new node(0027);
+
+//right child
+tree.root.right.left = new node(0055);
+tree.root.right.right = new node(0070);
+tree.root.right.left.left = new node(0054);
+
+
+System.out.println("In Pre-Order traversal");
+tree.preorder(tree.root);
+
+System.out.println("\n\nIn Order traversal");
+tree.inorder(tree.root);
+
+System.out.println("\n\nPost-Order traversal");
+tree.postorder(tree.root);
+
+}
+}
+
+    class node {
+    int num;
+    node left, right;
+
+        public node(int i) {
+        num = i;
+        left = right = null;
+    }
+    }
+
+//methods
+    class Tree {
+    node root;
+    Tree() {
+    root = null;
+    }
+        //preorder
+        void preorder(node node) {
+        if (node == null)
+        return;
+            System.out.print(node.num + "->");
+            preorder(node.left);
+            preorder(node.right);
+    }
+        //inorder
+        void inorder(node node) {
+        if (node == null)
+        return;
+            inorder(node.left);
+            System.out.print(node.num + "->");
+            inorder(node.right);
+    }
+       //postorder
+        void postorder(node node) {
+        if (node == null)
+        return;
+            postorder(node.left);
+            postorder(node.right);
+            System.out.print(node.num + "->");
+    }
+    }
+
+ 
+
+
+
+

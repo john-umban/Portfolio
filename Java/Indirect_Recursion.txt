@@ -1,0 +1,78 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package indirect_recursion;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Elhk
+ */
+public class Indirect_Recursion {
+ 
+ 
+static final int n = 1;
+    static void even(int m, int n)
+    {
+        
+        if(n<m){
+            return;
+        }
+            
+            if(n % 2==0){
+                even(m,n -2);
+            }
+      
+          else 
+                even(m,n-1);
+                
+            if(n % 2==0){
+            System.out.println(n + " ");
+            
+        }
+    }
+    
+    //odd
+    static void odd(int m, int n)
+    {
+        if(n<m){
+            return;
+        }
+            
+            if(n % 2==1){
+                odd(m,n -2);
+            }
+      
+          else 
+                odd(m,n-1);
+                
+            if(n % 2==1){         
+            System.out.println(n + " ");
+            
+        }
+    
+        
+    }
+      static void array(int m, int n){
+        
+        System.out.println("Even numbers: ");
+        even(m,n);  
+        
+        System.out.println("\nOdd numbers: ");
+        odd(m,n);
+}
+
+    // Driver Program
+
+    public static void main(String[] args) {
+    System.out.println("Enter number: ");
+    Scanner sc = new Scanner(System.in);
+    int m =sc.nextInt();
+    array(n,m);
+        
+    }
+    
+}

@@ -1,0 +1,71 @@
+
+package midterm_summative1;
+import java.util.*;
+
+public class Summative_Array {
+
+
+    public static void main(String[] args) {
+            int key, n = 0, largestindex = 0, largest = 0, c;
+            double sum = 0;
+        Scanner console = new Scanner (System.in);
+        System.out.println("Input Length of the array: ");
+        int sc = console.nextInt();
+        System.out.println("Enter " + sc + " of elements.");
+        
+        ArrayList<Integer> arr = new ArrayList <>();
+        
+        while(console.hasNextInt()){
+            arr.add(console.nextInt());
+            if (arr.size() == sc){
+                break;
+                
+            }
+            
+        }
+        
+    //traversing of data
+     System.out.println("Elements in the array: ");
+     for (int i = 0; i < arr.size(); i++)
+     System.out.print(arr.get(i) + " \n" );       
+       
+    //average
+    for (int i = 0; i < arr.size(); i++){
+    sum += arr.get(i);
+    }
+    double average = sum / arr.size();
+        System.out.println("Average is: " + average);
+
+
+    
+   // arr index largest value      
+    for ( int i = 1; i < arr.size(); i++ )
+    {
+    if ( arr.get(i) > arr.get(largestindex)) largestindex = i;
+    }
+        
+        
+    // arr largest value  
+    for(int i = 0; i < arr.size(); i++){
+    if(largest < arr.get(i)){
+    largest = arr.get(i);
+    }
+    }
+    System.out.println("Maximum value in the array is:" + largest);
+            System.out.println("Index of the largest value: " + largestindex);
+
+    //remove largest value & arrange to ascending
+
+    arr.remove(largestindex);
+
+    Collections.sort(arr);
+    System.out.println("Final array: " + arr);
+
+    }
+
+    }
+
+
+
+    
+    

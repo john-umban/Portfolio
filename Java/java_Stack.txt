@@ -1,0 +1,74 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package midterm.enabling.assessment.pkg4;
+
+/**
+ *
+ * @author Elhk
+ */
+import java.util.*;
+public class java_Stack {
+
+    public static void main(String[] args) {
+
+        Stack<Integer> num = new Stack<>();
+// stack of integer
+        num.push(12);
+
+        num.push(18);
+
+        num.push(14);
+
+        num.push(6);
+
+        num.push(7);
+        
+        num.push(9);
+        
+        num.push(21);
+        
+        num.push(2);
+        System.out.println("Elements on the stack: " + num);
+        
+//remove 2 elements
+System.out.println("Removed elements: " + num.pop() + " & " + num.pop());
+
+
+//display remaining elements
+System.out.println("Remaining elements on the stack: " + num);
+
+//add 100 & 200 on the stack
+num.add(100);
+num.add(200);
+
+//remove element in index 3
+num.remove(3);
+
+//display remaining elements
+System.out.println("Remaining updated elements on the stack: " + num);
+
+//size of stack
+System.out.println("Size of the stack: " + num.size());
+
+//first element in the stack
+System.out.println("First element in the stack: " + num.firstElement());
+
+//remove all elements in the stack
+num.clear();
+
+//determine if stack empty or not
+
+boolean result = num.empty();
+System.out.println("Clearing stack..."
+        + "\nIs the stack empty?: " + result);
+
+//final stack
+System.out.println("Final stack: " + num);
+        
+        
+    }
+    
+}

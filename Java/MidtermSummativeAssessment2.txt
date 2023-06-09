@@ -1,0 +1,54 @@
+package midterm.summative.assessment.pkg2;
+
+/**
+ *
+ * @author John_Umban
+ */
+import java.util.*;
+public class MidtermSummativeAssessment2 {
+         
+    Stack<String> elem = new Stack<>();
+    //push
+    void push(){
+            Scanner console = new Scanner(System.in);
+
+        System.out.println("Enter the size of the stack: ");
+       int sc =console.nextInt();
+       
+
+        System.out.println("Push the element on the stack: ");
+                for(int i=0; i<sc; i++){
+            elem.push(console.next());
+        }
+    }
+    
+       
+     //pop
+    void pop(){
+    System.out.println("The popped element is: " + elem.pop()+"\n"); 
+}
+
+    //display
+    void display(){
+        System.out.println("The Stack:");
+    Iterator ite = elem.iterator();
+    while(ite.hasNext()){
+        System.out.println(ite.next()+ "");
+    }
+    }
+   
+    //peek
+    void peek(){
+    System.out.println("The top element is " + elem.peek());    
+}
+
+    public static void main(String[] args) {
+        
+   MidtermSummativeAssessment2 stack = new MidtermSummativeAssessment2();
+        
+        stack.push();
+        stack.pop();
+        stack.display();
+        stack.peek();
+    }
+} 

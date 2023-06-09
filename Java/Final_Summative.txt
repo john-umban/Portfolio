@@ -1,0 +1,62 @@
+
+package final_summative_1;
+
+
+import java.util.*;
+public class Final_Summative_1 {
+
+
+static int queue(){
+    // queue       
+        System.out.println("*****Program 1*****");
+        Queue<Integer> q = new LinkedList<>();
+       
+        q.add(2);
+        q.add(3);
+        q.add(4);
+        q.add(5);
+        q.add(6);
+        
+        //display front element
+        System.out.println("Elements in the queue: " + q);
+        
+        //display front element
+        System.out.println("Front element of the queue: " + q.peek());
+  
+        // To remove the head of queue.
+        System.out.println("removed element: " + q.remove());
+        
+        //size of queue
+        System.out.println("Size of queue: "+ q.size());
+            
+        // Display contents of the queue.
+        q.clear();
+        System.out.println("Elements of the final queue: "+ q);
+       
+        return 0;
+}
+
+
+//decimal to binary
+static int decimal (int a){
+     String bin = Integer.toBinaryString(a);
+      System.out.println("The equivalent Binary notation is: " + bin);
+    return a;
+}
+
+
+
+
+public static void main(String[] args) {
+    queue();
+    Scanner console = new Scanner(System.in);
+    System.out.print("\n*****Program 2*****\nEnter num: ");
+    int sc = console.nextInt();  
+    decimal(sc);
+
+               
+  
+        
+    }
+    
+}

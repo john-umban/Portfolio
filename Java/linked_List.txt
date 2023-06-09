@@ -1,0 +1,49 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package midterm.enabling.assessment.pkg3;
+
+/**
+ *
+ * @author John Dave
+ */
+   import java.util.*;
+public class linked_List {
+
+    public static void main(String[] args) {
+    LinkedList<String> names = new LinkedList<>();
+  
+    names.add("John");
+    names.add("Steve");
+    names.add("Gabriel");
+    names.add("Sean");
+    names.add("Paul");
+    names.add("Peach");
+    names.add("Miles");
+    names.add("Christine");
+    names.add("Joy");
+    names.add("Angel");
+    //Display all the elements
+System.out.println("all elements in the linked list: " + names);
+
+//Display all elements starting at position 3 
+System.out.println("all elements starting at position 3: "+ "[" + names.get(3)+ ", " + names.get(4)+ ", " +names.get(5) +
+      ", " +  names.get(6) + ", " + names.get(7)+ ", " + names.get(8)+ ", " + names.get(9)+ "]");
+   
+
+     // Insert your name in fifth position
+        names.add(5, "John Dave");
+        System.out.println("Inserted name: " + names.get(5));
+    //Replace your name with your nickname
+        names.set(5, "jd");
+        System.out.println("Replaced name: " + names.get(5));
+    // Remove element 6 from the list
+    names.remove(6);
+        System.out.println("Element removed: " + names.get(6));
+    //updated list    
+    System.out.println("Updated list: " + "[" + names.get(3)+ ", " + names.get(4)+ ", " +names.get(5) +
+      ", " +  names.get(6) + ", " + names.get(7)+ ", " + names.get(8)+ ", " + names.get(9)+ "]");
+  }
+}

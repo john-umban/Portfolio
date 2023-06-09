@@ -1,0 +1,44 @@
+package finalsummativeassessment_2;
+
+import java.util.*;
+
+public class FinalSummativeAssessment_2_UG {
+
+static void add_Edge(ArrayList<ArrayList<Integer> > adj,
+int u, int vertices)
+{
+adj.get(u).add(vertices);
+adj.get(vertices).add(u);
+}
+
+static void adjacency(ArrayList<ArrayList<Integer> > adj)
+{
+for (int i = 0; i < adj.size(); i++) {
+System.out.println("Adjacency list of " + i);
+for (int j = 0; j < adj.get(i).size(); j++) {
+System.out.print(adj.get(i).get(j) + " ");
+}
+System.out.println();
+}
+}
+public static void main(String[] args) {
+int vert = 7;
+ArrayList<ArrayList<Integer> > adj = new ArrayList<>(vert);
+for (int i = 0; i < vert; i++)
+adj.add(new ArrayList<>());
+
+    add_Edge(adj, 0, 1);
+    add_Edge(adj, 0, 3);
+    add_Edge(adj, 1, 2);
+    add_Edge(adj, 1, 3);
+    add_Edge(adj, 1, 5);
+    add_Edge(adj, 1, 6);
+    add_Edge(adj, 2, 3);
+    add_Edge(adj, 2, 4);
+    add_Edge(adj, 2, 5);
+    add_Edge(adj, 3, 4);
+    add_Edge(adj, 5, 6);
+
+adjacency(adj);
+}
+}
