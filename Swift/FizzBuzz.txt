@@ -1,0 +1,32 @@
+var insert : String = "Please input a number:"
+print (insert ,terminator:"")
+if let digit = readLine(),
+let nos = Int (digit){
+
+func fizzbuzz (number: Int) -> String {
+
+  switch(number % 3 == 0, number % 5 == 0 ){
+    
+    case (true,false):
+    return "Your number: \(number), is divisible by 3 \n and it is considered as Fizz."
+    
+    case(false,true):
+    return "Your number: \(number), is divisible by 5 \n and it is considered as Buzz."
+
+    case(true,true):
+    return "Your number: \(number), is divisible by 3 and 5 \n and it is considered as FizzBuzz."
+
+    case (false, false):
+    return String(number)
+
+  }
+}
+let num = [nos]
+for userinput in num {
+let b = fizzbuzz(number: userinput)
+print (b)
+}
+let exit : String = "Please enter 0 to exit"
+print (exit)
+let _ = readLine ()
+}

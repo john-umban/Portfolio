@@ -1,0 +1,31 @@
+//Is a string a Palidrome//
+
+func palindrome (word: String) -> Bool {
+let str = "rotator"
+let smalletters = str.lowercased()
+let reversed = String(smalletters.reversed())
+let _ = Array(reversed)
+
+ return String(word.reversed()) == word
+
+}
+let hello = "rotator"
+
+let b = palindrome(word: hello)
+print(b)
+
+
+// Fuzzy Matching//
+
+let hi : String = ("")
+import Foundation
+extension String {
+ func coding(_ word: String) -> Bool {
+ return self.uppercased().range(of: word.uppercased()) 
+ != nil
+ } 
+ }
+let input = "Hello, world".coding("Goodbye")
+
+print (input)
+
